@@ -1,0 +1,80 @@
+fragment BlogPostParts on BlogPost {
+  slug
+  locale
+  seo {
+    __typename
+    title
+    description
+    meta {
+      __typename
+      name
+      content
+    }
+  }
+  mainTitle
+  category
+  heroImage
+  date
+  title
+  paragraph
+  hasButton
+  button
+  link
+}
+
+fragment PagesParts on Pages {
+  slug
+  locale
+  seo {
+    __typename
+    title
+    description
+    meta {
+      __typename
+      name
+      content
+    }
+  }
+  pageBlocks {
+    __typename
+    ... on PagesPageBlocksSpacing {
+      size
+    }
+    ... on PagesPageBlocksHomepageHero {
+      title
+      description
+      heroImage
+    }
+    ... on PagesPageBlocksTwoImages {
+      imageList {
+        __typename
+        heroImage
+        buttonTitle
+        mainTitle
+        buttonLink
+      }
+    }
+    ... on PagesPageBlocksImage {
+      mainTitle
+      imageList {
+        __typename
+        heroImage
+        buttonTitle
+        buttonLink
+        mobileImage
+      }
+    }
+    ... on PagesPageBlocksImageTwo {
+      imageList {
+        __typename
+        heroImage
+        buttonTitle
+        mainTitle
+        buttonLink
+      }
+    }
+    ... on PagesPageBlocksContentVideo {
+      cvideoPlayer
+    }
+  }
+}

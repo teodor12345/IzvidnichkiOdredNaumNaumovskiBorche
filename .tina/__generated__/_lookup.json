@@ -1,0 +1,56 @@
+{
+  "DocumentConnection": {
+    "type": "DocumentConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": [
+      "blogPost",
+      "pages"
+    ]
+  },
+  "Node": {
+    "type": "Node",
+    "resolveType": "nodeDocument"
+  },
+  "DocumentNode": {
+    "type": "DocumentNode",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
+  },
+  "BlogPostDocument": {
+    "type": "BlogPostDocument",
+    "resolveType": "collectionDocument",
+    "collection": "blogPost",
+    "createBlogPostDocument": "create",
+    "updateBlogPostDocument": "update"
+  },
+  "BlogPostConnection": {
+    "type": "BlogPostConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "blogPost"
+  },
+  "PagesPageBlocks": {
+    "type": "PagesPageBlocks",
+    "resolveType": "unionData",
+    "typeMap": {
+      "spacing": "PagesPageBlocksSpacing",
+      "homepageHero": "PagesPageBlocksHomepageHero",
+      "twoImages": "PagesPageBlocksTwoImages",
+      "image": "PagesPageBlocksImage",
+      "imageTwo": "PagesPageBlocksImageTwo",
+      "contentVideo": "PagesPageBlocksContentVideo"
+    }
+  },
+  "PagesDocument": {
+    "type": "PagesDocument",
+    "resolveType": "collectionDocument",
+    "collection": "pages",
+    "createPagesDocument": "create",
+    "updatePagesDocument": "update"
+  },
+  "PagesConnection": {
+    "type": "PagesConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "pages"
+  }
+}

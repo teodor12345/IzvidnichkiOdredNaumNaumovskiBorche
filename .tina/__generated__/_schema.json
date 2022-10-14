@@ -1,0 +1,711 @@
+{
+  "version": {
+    "fullVersion": "0.59.8",
+    "major": "0",
+    "minor": "59",
+    "patch": "8"
+  },
+  "meta": {},
+  "collections": [
+    {
+      "label": "Blog Posts",
+      "name": "blogPost",
+      "path": "content/blog",
+      "fields": [
+        {
+          "name": "slug",
+          "label": "Internationalization Key",
+          "type": "string",
+          "description": "A key that connects the English and Dutch version of the pages.",
+          "namespace": [
+            "blogPost",
+            "slug"
+          ]
+        },
+        {
+          "name": "locale",
+          "label": "Language",
+          "type": "string",
+          "ui": {
+            "component": "select",
+            "options": [
+              {
+                "label": "English",
+                "value": "en"
+              },
+              {
+                "label": "Dutch",
+                "value": "nl"
+              }
+            ]
+          },
+          "namespace": [
+            "blogPost",
+            "locale"
+          ]
+        },
+        {
+          "name": "seo",
+          "label": "SEO",
+          "type": "object",
+          "fields": [
+            {
+              "type": "string",
+              "label": "Title",
+              "name": "title",
+              "namespace": [
+                "blogPost",
+                "seo",
+                "title"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Description",
+              "name": "description",
+              "namespace": [
+                "blogPost",
+                "seo",
+                "description"
+              ]
+            },
+            {
+              "type": "object",
+              "label": "Meta Tags",
+              "name": "meta",
+              "list": true,
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Name",
+                  "name": "name",
+                  "ui": {
+                    "component": "select",
+                    "options": [
+                      {
+                        "label": "keywords",
+                        "value": "keywords"
+                      },
+                      {
+                        "label": "author",
+                        "value": "author"
+                      },
+                      {
+                        "label": "rating",
+                        "value": "rating"
+                      },
+                      {
+                        "label": "robots",
+                        "value": "robots"
+                      }
+                    ]
+                  },
+                  "namespace": [
+                    "blogPost",
+                    "seo",
+                    "meta",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Content",
+                  "name": "content",
+                  "namespace": [
+                    "blogPost",
+                    "seo",
+                    "meta",
+                    "content"
+                  ]
+                }
+              ],
+              "namespace": [
+                "blogPost",
+                "seo",
+                "meta"
+              ]
+            }
+          ],
+          "namespace": [
+            "blogPost",
+            "seo"
+          ]
+        },
+        {
+          "label": "Main Title",
+          "name": "mainTitle",
+          "type": "string",
+          "namespace": [
+            "blogPost",
+            "mainTitle"
+          ]
+        },
+        {
+          "label": "Category",
+          "name": "category",
+          "type": "string",
+          "namespace": [
+            "blogPost",
+            "category"
+          ]
+        },
+        {
+          "label": "Hero Image",
+          "name": "heroImage",
+          "type": "image",
+          "namespace": [
+            "blogPost",
+            "heroImage"
+          ]
+        },
+        {
+          "label": "Date",
+          "name": "date",
+          "type": "string",
+          "namespace": [
+            "blogPost",
+            "date"
+          ]
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "type": "string",
+          "namespace": [
+            "blogPost",
+            "title"
+          ]
+        },
+        {
+          "label": "Paragraph",
+          "name": "paragraph",
+          "type": "rich-text",
+          "namespace": [
+            "blogPost",
+            "paragraph"
+          ]
+        },
+        {
+          "label": "Has Button",
+          "name": "hasButton",
+          "type": "boolean",
+          "namespace": [
+            "blogPost",
+            "hasButton"
+          ]
+        },
+        {
+          "label": "Button",
+          "name": "button",
+          "type": "string",
+          "namespace": [
+            "blogPost",
+            "button"
+          ]
+        },
+        {
+          "label": "Link",
+          "name": "link",
+          "type": "string",
+          "namespace": [
+            "blogPost",
+            "link"
+          ]
+        }
+      ],
+      "namespace": [
+        "blogPost"
+      ]
+    },
+    {
+      "label": "Pages",
+      "name": "pages",
+      "path": "content/pages",
+      "fields": [
+        {
+          "name": "slug",
+          "label": "Internationalization Key",
+          "type": "string",
+          "description": "A key that connects the English and Dutch version of the pages.",
+          "namespace": [
+            "pages",
+            "slug"
+          ]
+        },
+        {
+          "name": "locale",
+          "label": "Language",
+          "type": "string",
+          "ui": {
+            "component": "select",
+            "options": [
+              {
+                "label": "English",
+                "value": "en"
+              }
+            ]
+          },
+          "namespace": [
+            "pages",
+            "locale"
+          ]
+        },
+        {
+          "name": "seo",
+          "label": "SEO",
+          "type": "object",
+          "fields": [
+            {
+              "type": "string",
+              "label": "Title",
+              "name": "title",
+              "namespace": [
+                "pages",
+                "seo",
+                "title"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Description",
+              "name": "description",
+              "namespace": [
+                "pages",
+                "seo",
+                "description"
+              ]
+            },
+            {
+              "type": "object",
+              "label": "Meta Tags",
+              "name": "meta",
+              "list": true,
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Name",
+                  "name": "name",
+                  "namespace": [
+                    "pages",
+                    "seo",
+                    "meta",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Content",
+                  "name": "content",
+                  "ui": {
+                    "component": "select",
+                    "options": [
+                      {
+                        "label": "keywords",
+                        "value": "keywords"
+                      },
+                      {
+                        "label": "author",
+                        "value": "author"
+                      },
+                      {
+                        "label": "rating",
+                        "value": "rating"
+                      },
+                      {
+                        "label": "robots",
+                        "value": "robots"
+                      }
+                    ]
+                  },
+                  "namespace": [
+                    "pages",
+                    "seo",
+                    "meta",
+                    "content"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "seo",
+                "meta"
+              ]
+            }
+          ],
+          "namespace": [
+            "pages",
+            "seo"
+          ]
+        },
+        {
+          "label": "Page Blocks",
+          "name": "pageBlocks",
+          "type": "object",
+          "list": true,
+          "templates": [
+            {
+              "name": "spacing",
+              "label": "Spacing",
+              "fields": [
+                {
+                  "name": "size",
+                  "label": "Spacing Size",
+                  "type": "string",
+                  "ui": {
+                    "component": "radio-group",
+                    "direction": "horizontal",
+                    "description": "Choose the height of the spacing block",
+                    "options": [
+                      {
+                        "label": "XS",
+                        "value": "xs"
+                      },
+                      {
+                        "label": "S",
+                        "value": "s"
+                      },
+                      {
+                        "label": "M",
+                        "value": "m"
+                      },
+                      {
+                        "label": "L",
+                        "value": "l"
+                      },
+                      {
+                        "label": "XL",
+                        "value": "xl"
+                      },
+                      {
+                        "label": "XXL",
+                        "value": "xxl"
+                      },
+                      {
+                        "label": "XXXL",
+                        "value": "xxxl"
+                      }
+                    ]
+                  },
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "spacing",
+                    "size"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageBlocks",
+                "spacing"
+              ]
+            },
+            {
+              "label": "Homepage Hero",
+              "name": "homepageHero",
+              "fields": [
+                {
+                  "label": "Title",
+                  "name": "title",
+                  "type": "string",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "homepageHero",
+                    "title"
+                  ]
+                },
+                {
+                  "label": "Description",
+                  "name": "description",
+                  "type": "rich-text",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "homepageHero",
+                    "description"
+                  ]
+                },
+                {
+                  "label": "Hero Image",
+                  "name": "heroImage",
+                  "type": "image",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "homepageHero",
+                    "heroImage"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageBlocks",
+                "homepageHero"
+              ]
+            },
+            {
+              "label": "Two images block",
+              "name": "twoImages",
+              "fields": [
+                {
+                  "label": "Image List",
+                  "name": "imageList",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "label": "Hero Image",
+                      "name": "heroImage",
+                      "type": "image",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "twoImages",
+                        "imageList",
+                        "heroImage"
+                      ]
+                    },
+                    {
+                      "label": "Button on Image",
+                      "name": "buttonTitle",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "twoImages",
+                        "imageList",
+                        "buttonTitle"
+                      ]
+                    },
+                    {
+                      "label": "Text on Image",
+                      "name": "mainTitle",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "twoImages",
+                        "imageList",
+                        "mainTitle"
+                      ]
+                    },
+                    {
+                      "label": "Link",
+                      "name": "buttonLink",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "twoImages",
+                        "imageList",
+                        "buttonLink"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "twoImages",
+                    "imageList"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageBlocks",
+                "twoImages"
+              ]
+            },
+            {
+              "label": "Image block",
+              "name": "image",
+              "fields": [
+                {
+                  "label": "Text on Image",
+                  "name": "mainTitle",
+                  "type": "rich-text",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "image",
+                    "mainTitle"
+                  ]
+                },
+                {
+                  "label": "Image List",
+                  "name": "imageList",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "label": "Hero Image",
+                      "name": "heroImage",
+                      "type": "image",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "image",
+                        "imageList",
+                        "heroImage"
+                      ]
+                    },
+                    {
+                      "label": "Button on Image",
+                      "name": "buttonTitle",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "image",
+                        "imageList",
+                        "buttonTitle"
+                      ]
+                    },
+                    {
+                      "label": "Link",
+                      "name": "buttonLink",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "image",
+                        "imageList",
+                        "buttonLink"
+                      ]
+                    },
+                    {
+                      "label": "Mobile Image",
+                      "name": "mobileImage",
+                      "type": "image",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "image",
+                        "imageList",
+                        "mobileImage"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "image",
+                    "imageList"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageBlocks",
+                "image"
+              ]
+            },
+            {
+              "label": "Images Two block",
+              "name": "imageTwo",
+              "fields": [
+                {
+                  "label": "Image List",
+                  "name": "imageList",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "label": "Hero Image",
+                      "name": "heroImage",
+                      "type": "image",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "imageTwo",
+                        "imageList",
+                        "heroImage"
+                      ]
+                    },
+                    {
+                      "label": "Button on Image",
+                      "name": "buttonTitle",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "imageTwo",
+                        "imageList",
+                        "buttonTitle"
+                      ]
+                    },
+                    {
+                      "label": "Text on Image",
+                      "name": "mainTitle",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "imageTwo",
+                        "imageList",
+                        "mainTitle"
+                      ]
+                    },
+                    {
+                      "label": "Link",
+                      "name": "buttonLink",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "imageTwo",
+                        "imageList",
+                        "buttonLink"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "imageTwo",
+                    "imageList"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageBlocks",
+                "imageTwo"
+              ]
+            },
+            {
+              "label": "Content Video ",
+              "name": "contentVideo",
+              "fields": [
+                {
+                  "label": "Video URL",
+                  "name": "cvideoPlayer",
+                  "type": "string",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "contentVideo",
+                    "cvideoPlayer"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageBlocks",
+                "contentVideo"
+              ]
+            }
+          ],
+          "namespace": [
+            "pages",
+            "pageBlocks"
+          ]
+        }
+      ],
+      "namespace": [
+        "pages"
+      ]
+    }
+  ]
+}
