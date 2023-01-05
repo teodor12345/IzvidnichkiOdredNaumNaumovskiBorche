@@ -11,6 +11,7 @@
     "@tailwindcss/typography": "^0.5.1",
     "@tinacms/auth": "^0.50.2",
     "@tinacms/cli": "^0.60.5",
+    "cloudinary-react": "^1.8.1",
     "next": "12.0.10",
     "next-i18next": "^11.0.0",
     "next-tinacms-cloudinary": "^3.5.7",
