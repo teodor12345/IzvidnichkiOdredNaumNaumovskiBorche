@@ -12,13 +12,15 @@ pageBlocks:
     _template: spacing
   - imageList:
       - heroImage: >-
-          https://res.cloudinary.com/sols/image/upload/v1665674196/9-min_wafpzr.jpg
+          https://res.cloudinary.com/dszkdvuko/image/upload/v1672927673/9-min_1_jdwc8p.jpg
         buttonTitle: DISCOVER
         mainTitle: ILLUSTRATIONS W
+        buttonLink: /w-illustrations
       - heroImage: >-
-          https://res.cloudinary.com/sols/image/upload/v1665674220/10-min_xcsiq1.jpg
+          https://res.cloudinary.com/dszkdvuko/image/upload/v1672927701/8-min_vy1lgm.jpg
         buttonTitle: DISCOVER
         mainTitle: ILLUSTRATIONS M
+        buttonLink: /m-illustrations
     _template: twoImages
   - size: s
     _template: spacing
@@ -26,29 +28,26 @@ pageBlocks:
       EDITORIAL EDITION
     imageList:
       - heroImage: >-
-          https://res.cloudinary.com/sols/image/upload/v1665678770/Nikola-3-1-1536x864_js0ksg.jpg
+          https://res.cloudinary.com/dszkdvuko/image/upload/v1672927763/Nikola-3-1-1536x864_b1bgmb.jpg
         buttonTitle: DISCOVER
         mobileImage: >-
-          https://res.cloudinary.com/sols/image/upload/v1665680750/Nikola-3-1-1536x864_gxaehm.jpg
+          https://res.cloudinary.com/dszkdvuko/image/upload/v1672927763/Nikola-3-1-1536x864_b1bgmb.jpg
     _template: image
   - size: s
     _template: spacing
   - imageList:
       - heroImage: >-
-          https://res.cloudinary.com/sols/image/upload/v1665769811/4d2f034ba197e4bf189f56d9bf13465e4-w_730-h_960_kosjab.jpg
+          https://res.cloudinary.com/dszkdvuko/image/upload/v1672927805/320391669_1251667188746974_2441250934923747265_n_exogzr.jpg
         buttonTitle: DISCOVER
         mainTitle: BELLA EDITION
       - heroImage: >-
-          https://res.cloudinary.com/sols/image/upload/v1665769811/4d2f034ba197e4bf189f56d9bf13465e4-w_730-h_960_kosjab.jpg
+          https://res.cloudinary.com/dszkdvuko/image/upload/v1672927788/321039253_876880003348172_4496263131160991686_n_hfocpq.jpg
         buttonTitle: DISCOVER
         mainTitle: BELLA EDITON
     _template: imageTwo
   - size: s
     _template: spacing
-  - cvideoTitle: |
-      jfieifjei
-    cvideoDescription: ''
-    cvideoPlayer: 'https://www.youtube.com/watch?v=pE7iaQkTgUM'
+  - cvideoPlayer: 'https://www.youtube.com/watch?v=pE7iaQkTgUM'
     _template: contentVideo
   - size: s
     _template: spacing

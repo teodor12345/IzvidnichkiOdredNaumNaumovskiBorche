@@ -695,6 +695,114 @@
                 "pageBlocks",
                 "contentVideo"
               ]
+            },
+            {
+              "label": "Left Image Right Links",
+              "name": "leftImageRightLinks",
+              "fields": [
+                {
+                  "label": "Background Image",
+                  "name": "bgImage",
+                  "type": "image",
+                  "description": "Featured Image ",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "leftImageRightLinks",
+                    "bgImage"
+                  ]
+                },
+                {
+                  "label": "Background Image Alt",
+                  "name": "bgImageAlt",
+                  "type": "string",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "leftImageRightLinks",
+                    "bgImageAlt"
+                  ]
+                },
+                {
+                  "label": "Switch to Right",
+                  "name": "flip",
+                  "type": "boolean",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "leftImageRightLinks",
+                    "flip"
+                  ]
+                },
+                {
+                  "label": "List",
+                  "name": "listOfMerchandise",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "label": "Description List",
+                      "name": "description",
+                      "type": "rich-text",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "leftImageRightLinks",
+                        "listOfMerchandise",
+                        "description"
+                      ]
+                    },
+                    {
+                      "label": "Icon",
+                      "name": "icon",
+                      "type": "image",
+                      "description": "Featured Image ",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "leftImageRightLinks",
+                        "listOfMerchandise",
+                        "icon"
+                      ]
+                    },
+                    {
+                      "label": "Icon Alt",
+                      "name": "iconAlt",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "leftImageRightLinks",
+                        "listOfMerchandise",
+                        "iconAlt"
+                      ]
+                    },
+                    {
+                      "label": "Link",
+                      "name": "link",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageBlocks",
+                        "leftImageRightLinks",
+                        "listOfMerchandise",
+                        "link"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "leftImageRightLinks",
+                    "listOfMerchandise"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageBlocks",
+                "leftImageRightLinks"
+              ]
             }
           ],
           "namespace": [

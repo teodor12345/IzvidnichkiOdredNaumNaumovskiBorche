@@ -38,7 +38,8 @@
       "twoImages": "PagesPageBlocksTwoImages",
       "image": "PagesPageBlocksImage",
       "imageTwo": "PagesPageBlocksImageTwo",
-      "contentVideo": "PagesPageBlocksContentVideo"
+      "contentVideo": "PagesPageBlocksContentVideo",
+      "leftImageRightLinks": "PagesPageBlocksLeftImageRightLinks"
     }
   },
   "PagesDocument": {

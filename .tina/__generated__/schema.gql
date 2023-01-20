@@ -185,7 +185,21 @@ type PagesPageBlocksContentVideo {
   cvideoPlayer: String
 }
 
-union PagesPageBlocks = PagesPageBlocksSpacing | PagesPageBlocksHomepageHero | PagesPageBlocksTwoImages | PagesPageBlocksImage | PagesPageBlocksImageTwo | PagesPageBlocksContentVideo
+type PagesPageBlocksLeftImageRightLinksListOfMerchandise {
+  description: JSON
+  icon: String
+  iconAlt: String
+  link: String
+}
+
+type PagesPageBlocksLeftImageRightLinks {
+  bgImage: String
+  bgImageAlt: String
+  flip: Boolean
+  listOfMerchandise: [PagesPageBlocksLeftImageRightLinksListOfMerchandise]
+}
+
+union PagesPageBlocks = PagesPageBlocksSpacing | PagesPageBlocksHomepageHero | PagesPageBlocksTwoImages | PagesPageBlocksImage | PagesPageBlocksImageTwo | PagesPageBlocksContentVideo | PagesPageBlocksLeftImageRightLinks
 
 type Pages {
   slug: String
@@ -314,6 +328,20 @@ input PagesPageBlocksContentVideoMutation {
   cvideoPlayer: String
 }
 
+input PagesPageBlocksLeftImageRightLinksListOfMerchandiseMutation {
+  description: JSON
+  icon: String
+  iconAlt: String
+  link: String
+}
+
+input PagesPageBlocksLeftImageRightLinksMutation {
+  bgImage: String
+  bgImageAlt: String
+  flip: Boolean
+  listOfMerchandise: [PagesPageBlocksLeftImageRightLinksListOfMerchandiseMutation]
+}
+
 input PagesPageBlocksMutation {
   spacing: PagesPageBlocksSpacingMutation
   homepageHero: PagesPageBlocksHomepageHeroMutation
@@ -321,6 +349,7 @@ input PagesPageBlocksMutation {
   image: PagesPageBlocksImageMutation
   imageTwo: PagesPageBlocksImageTwoMutation
   contentVideo: PagesPageBlocksContentVideoMutation
+  leftImageRightLinks: PagesPageBlocksLeftImageRightLinksMutation
 }
 
 input PagesMutation {

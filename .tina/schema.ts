@@ -176,6 +176,61 @@ const ContentVideoTemplate: TinaTemplate = {
     },
   ],
 };
+const LeftImageRightLinksTemplate: TinaTemplate = {
+  label: 'Left Image Right Links',
+  name: 'leftImageRightLinks',
+  fields: [
+
+    {
+      label: 'Background Image',
+      name: 'bgImage',
+      type: 'image',
+      description: 'Featured Image ',
+    },
+    {
+      label: 'Background Image Alt',
+      name: 'bgImageAlt',
+      type: 'string',
+    },
+    {
+      label: 'Switch to Right',
+      name: 'flip',
+      type: 'boolean',
+    },
+    {
+      label: 'List',
+      name: 'listOfMerchandise',
+      type: 'object',
+      list: true,
+      fields: [
+      
+        {
+          label: 'Description List',
+          name: 'description',
+          type: 'rich-text',
+        },
+  
+        {
+          label: 'Icon',
+          name: 'icon',
+          type: 'image',
+          description: 'Featured Image ',
+        },
+        {
+          label: 'Icon Alt',
+          name: 'iconAlt',
+          type: 'string',
+        },
+        {
+          label: 'Link',
+          name: 'link',
+          type: 'string',
+        },
+     
+      ],
+    },
+  ],
+};
 
 export default defineSchema({
   collections: [
@@ -369,7 +424,7 @@ export default defineSchema({
           name: "pageBlocks",
           type: "object",
           list: true,
-          templates: [SpacingBlockTemplate, HomepageHeroTemplate, TwoImagesBlockTemplate,ImageBlockTemplate,ImageTwoBlockTemplate,ContentVideoTemplate],
+          templates: [SpacingBlockTemplate, HomepageHeroTemplate, TwoImagesBlockTemplate,ImageBlockTemplate,ImageTwoBlockTemplate,ContentVideoTemplate,LeftImageRightLinksTemplate],
         },
       ],
     },

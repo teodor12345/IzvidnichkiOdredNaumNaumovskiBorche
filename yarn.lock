@@ -3714,6 +3714,19 @@ cloudinary-core@^2.10.2:
   resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.12.3.tgz#6482e472944214ff905c4852da0a4afce14dec2b"
   integrity sha512-Ll4eDzcrIVn4zCttMh3Mdi+KNz07p5EEjBT2PQSRx8Eok1lKPt3uBBenOk/w88RKK3B8SFIWcEe/mN4BHQ0p8A==
 
+cloudinary-core@^2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.13.0.tgz#b59f90871b6c708c3d0735b9be47ac08181c57fb"
+  integrity sha512-Nt0Q5I2FtenmJghtC4YZ3MZZbGg1wLm84SsxcuVwZ83OyJqG9CNIGp86CiI6iDv3QobaqBUpOT7vg+HqY5HxEA==
+
+cloudinary-react@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/cloudinary-react/-/cloudinary-react-1.8.1.tgz#8d017d959776be5e80717918412504aa6f35214f"
+  integrity sha512-90LHbUPfB8Uj5tKY08+ladN8ONyfak8zjnlAgVc39vlxKCx3b9G0/+I5C1QQGDwBRqHKzxyXterfugbWUrCQhA==
+  dependencies:
+    cloudinary-core "^2.13.0"
+    prop-types "^15.8.1"
+
 cloudinary@^1.25.2:
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.29.0.tgz#4e93bc6b8d710015d7ecea1829c869341d8e85bf"

@@ -3,6 +3,7 @@ import { ContentVideoQuery } from "../components/blocks/ContentVideoBlock/query"
 import { HomepageHeroQuery } from "../components/blocks/HomepageHeroBlock/query";
 import { ImageQuery } from "../components/blocks/ImageBlock/query";
 import { ImageTwoQuery } from "../components/blocks/ImageTwoBlock/query";
+import { LeftImageRightLinksQuery } from "../components/blocks/LeftImageRightLinksBlock/query";
 import { SpacingBlockQuery } from "../components/blocks/SpacingBlock/query";
 import { TwoImagesQuery } from "../components/blocks/TwoImagesBlock/query";
 
@@ -26,6 +27,7 @@ export const getPageQuery = gql`
           ${ImageQuery}
           ${ImageTwoQuery}
           ${ContentVideoQuery}
+          ${LeftImageRightLinksQuery}
         }
       }
     }

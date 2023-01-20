@@ -76,5 +76,17 @@ fragment PagesParts on Pages {
     ... on PagesPageBlocksContentVideo {
       cvideoPlayer
     }
+    ... on PagesPageBlocksLeftImageRightLinks {
+      bgImage
+      bgImageAlt
+      flip
+      listOfMerchandise {
+        __typename
+        description
+        icon
+        iconAlt
+        link
+      }
+    }
   }
 }
