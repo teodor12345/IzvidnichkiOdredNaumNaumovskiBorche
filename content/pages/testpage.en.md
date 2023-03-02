@@ -1,4 +1,4 @@
----
+ ---
 pageBlocks:
   - size: xs
     _template: spacing
