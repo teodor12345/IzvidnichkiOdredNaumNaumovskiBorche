@@ -1,15 +1,15 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 import {
   Maybe,
   PagesPageBlocksLeftImageRightLinks,
   PagesPageBlocksLeftImageRightLinksListOfMerchandise,
-} from '../../../.tina/__generated__/types';
-import iconPlaceholder from './assets/customMade.svg';
-import imageLeft from './assets/imageLeft.webp';
+} from "../../../.tina/__generated__/types";
+import iconPlaceholder from "./assets/customMade.svg";
+import imageLeft from "./assets/imageLeft.webp";
 
 function LeftImageRightLinksBlock({
   bgImage,
@@ -20,25 +20,41 @@ function LeftImageRightLinksBlock({
   return (
     <div className="relative mb-10 text-black bg-white">
       <div
- className={`flex mx-auto md:flex-row ${
-          flip ? 'md:flex-row lg:flex-row-reverse' : 'md:flex-row'
+        className={`flex mx-auto flex-col lg:flex-row ${
+          flip ? " flex-col md:flex-row-reverse" : "lg:flex-row flex-col"
         }`}
-      >        <div id="left-image" className="flex ">
+      >
+        {" "}
+        <div id="left-image" className="lg:flex hidden ">
           <Image
             src={bgImage || imageLeft.src}
             width={729}
             height={1147}
             layout="fixed"
-            alt={bgImageAlt || ''}
+            alt={bgImageAlt || ""}
+            objectFit="contain"
+            objectPosition="left"
+          />
+        </div>
+        <div
+          id="left-image"
+          className="flex lg:hidden items-center justify-center "
+        >
+          <Image
+            src={bgImage || imageLeft.src}
+            width={609}
+            height={800}
+            layout="fixed"
+            alt={bgImageAlt || ""}
             objectFit="contain"
             objectPosition="left"
           />
         </div>
         <div
           id="right-links"
-          className="flex flex-col justify-center px-8   "
+          className="flex lg:flex-col flex-row justify-center md:px-8 px-4   "
         >
-          <div className="grid  grid-cols-1 gap-12 self-center md:grid-cols-2 xl:gap-x-24">
+          <div className="grid  grid-cols-1 md:gap-12 gap-0 self-center xl:grid-cols-2 xl:gap-x-24">
             {listOfMerchandise?.map(
               (
                 item: Maybe<PagesPageBlocksLeftImageRightLinksListOfMerchandise>,
@@ -47,12 +63,12 @@ function LeftImageRightLinksBlock({
                 <div
                   key={
                     item?.description ||
-                    'leftImageRightLinksListOfMerchandise' + index
+                    "leftImageRightLinksListOfMerchandise" + index
                   }
-                  className="flex flex-col md:justify-between "
+                  className="flex flex-col justify-start lg:justify-betweePn "
                 >
                   <div className="flex flex-col">
-                    <div className="flex gap-x-4 items-center pb-4 md:flex-row">
+                    <div className="lg:flex hidden lg:gap-x-4 lg:items-center lg:pb-4 lg:flex-row">
                       <Image
                         alt="icon links"
                         src={item?.icon || iconPlaceholder.src}
@@ -61,7 +77,16 @@ function LeftImageRightLinksBlock({
                         layout="fixed"
                       />
                     </div>
-                    <div className="text-base prose-ul:list-disc prose-ol:list-decimal prose-a:text-lightGreen prose-a:underline">
+                    <div className="flex lg:hidden items-center justify-center ">
+                      <Image
+                        alt="icon links"
+                        src={item?.icon || iconPlaceholder.src}
+                        width={300}
+                        height={400}
+                        layout="fixed"
+                      />
+                    </div>
+                    <div className="text-[18px] pl-4 md:pl-0 prose-ul:list-disc text-center lg:text-start  prose-ol:list-decimal prose-a:text-lightGreen prose-a:underline">
                       {item?.description && (
                         <TinaMarkdown content={item.description} />
                       )}

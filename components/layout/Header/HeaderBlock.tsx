@@ -63,7 +63,7 @@ const HeaderBlock = ({ slugs, currentSlug }: P): JSX.Element => {
   const navigation: navItem[] = [
     {
       name: 'HOME',
-      href: "/linkAbout",
+      href: "/homepage",
       current: false,
       mobileicon: line,
     },

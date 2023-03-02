@@ -9,7 +9,7 @@ const ImageTwoBlock = ({
 
 
   return (
-    <div className="flex md:flex-row cursor-pointer flex-col container mx-auto gap-6 items-center z-5">
+    <div className="flex md:flex-row cursor-pointer flex-col container mx-auto gap-6 gap-x-20 items-center z-5">
       {props.imageList?.map((item: any, index: number) => (
         <div key={index * Math.random()}>
           <div className="grid grid-rows-1  ">
@@ -22,7 +22,7 @@ const ImageTwoBlock = ({
                   </div>
               </div>
               <section>
-                <div className="flex flex-wrap justify-center 2xl:ml-[280px]   mt-3 mb-5   text-gray-400">
+                <div className="flex flex-wrap justify-center 2xl:ml-[180px]   mt-3 mb-5   text-gray-400">
                   <a
                     href={item.buttonLink}
                     className="button button--winona p-0 bg-gray-200 hover:bg-gray-300 hover:text-gray-800 relative block focus:outline-none  rounded-lg text-xs md:text-sm text-center font-semibold uppercase tracking-widest align-middle overflow-hidden"
@@ -35,12 +35,14 @@ const ImageTwoBlock = ({
                 </div>
               </section>
             </div>
+            <div className="flex ">
             <Image
               src={item?.heroImage || placeholder.src}
               alt={"/"}
-              width={700}
+              width={650}
               height={900}
             />
+            </div>
           </div>
         </div>
       ))}

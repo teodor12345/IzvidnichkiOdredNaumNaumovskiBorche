@@ -33,12 +33,14 @@ const TwoImagesBlock = ({
                 </div>
               </section>
             </div>
+            <div className="flex items-ceter justify-center content-center pl-20">
             <Image
               src={item?.heroImage || placeholder.src}
               alt={"/"}
-              width={700}
+              width={600}
               height={900}
             />
+            </div>
           </div>
         </div>
       ))}

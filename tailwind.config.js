@@ -11,7 +11,7 @@ module.exports = {
       phoneLarge: '411px',
       sm: '640px',
       md: '768px',
-      lg: '1024px',
+      lg: '1124px',
       xl: '1280px',
       xlSpecial: '1430px',
       '2xl': '1536px',
