@@ -7,6 +7,7 @@ import { LeftImageRightLinksQuery } from "../components/blocks/LeftImageRightLin
 import { SpacingBlockQuery } from "../components/blocks/SpacingBlock/query";
 import { TwoImagesQuery } from "../components/blocks/TwoImagesBlock/query";
 import { AdventureBlockQuery } from "../components/blocks/AdventureBlock/query";
+import { TitleDescriptionQuery } from "../components/blocks/TitleDescriptionBlock/query";
 
 
 export const getPageQuery = gql`
@@ -31,6 +32,7 @@ export const getPageQuery = gql`
           ${ContentVideoQuery}
           ${LeftImageRightLinksQuery}
           ${AdventureBlockQuery}
+          ${TitleDescriptionQuery}
         }
       }
     }

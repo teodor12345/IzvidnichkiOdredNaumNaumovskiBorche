@@ -141,6 +141,11 @@ type PagesPageBlocksSpacing {
   size: String
 }
 
+type PagesPageBlocksTitleDescription {
+  mainTitle: JSON
+  mainDescription: JSON
+}
+
 type PagesPageBlocksHomepageHero {
   title: String
   description: JSON
@@ -206,7 +211,7 @@ type PagesPageBlocksLeftImageRightLinks {
   listOfMerchandise: [PagesPageBlocksLeftImageRightLinksListOfMerchandise]
 }
 
-union PagesPageBlocks = PagesPageBlocksSpacing | PagesPageBlocksHomepageHero | PagesPageBlocksAdventure | PagesPageBlocksTwoImages | PagesPageBlocksImage | PagesPageBlocksImageTwo | PagesPageBlocksContentVideo | PagesPageBlocksLeftImageRightLinks
+union PagesPageBlocks = PagesPageBlocksSpacing | PagesPageBlocksTitleDescription | PagesPageBlocksHomepageHero | PagesPageBlocksAdventure | PagesPageBlocksTwoImages | PagesPageBlocksImage | PagesPageBlocksImageTwo | PagesPageBlocksContentVideo | PagesPageBlocksLeftImageRightLinks
 
 type Pages {
   slug: String
@@ -291,6 +296,11 @@ input PagesPageBlocksSpacingMutation {
   size: String
 }
 
+input PagesPageBlocksTitleDescriptionMutation {
+  mainTitle: JSON
+  mainDescription: JSON
+}
+
 input PagesPageBlocksHomepageHeroMutation {
   title: String
   description: JSON
@@ -358,6 +368,7 @@ input PagesPageBlocksLeftImageRightLinksMutation {
 
 input PagesPageBlocksMutation {
   spacing: PagesPageBlocksSpacingMutation
+  titleDescription: PagesPageBlocksTitleDescriptionMutation
   homepageHero: PagesPageBlocksHomepageHeroMutation
   adventure: PagesPageBlocksAdventureMutation
   twoImages: PagesPageBlocksTwoImagesMutation

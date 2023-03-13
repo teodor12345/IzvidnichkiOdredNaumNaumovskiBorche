@@ -40,6 +40,10 @@ fragment PagesParts on Pages {
     ... on PagesPageBlocksSpacing {
       size
     }
+    ... on PagesPageBlocksTitleDescription {
+      mainTitle
+      mainDescription
+    }
     ... on PagesPageBlocksHomepageHero {
       title
       description

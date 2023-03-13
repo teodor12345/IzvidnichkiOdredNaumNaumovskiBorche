@@ -8,6 +8,7 @@ import ImageTwoBlock from "../blocks/ImageTwoBlock/ImageTwoBlock";
 import ContentVideoBlock from "../blocks/ContentVideoBlock/ContentVideoBlock";
 import LeftImageRightLinksBlock from "../blocks/LeftImageRightLinksBlock/LeftImageRightLinksBlock";
 import AdventureBlock from "../blocks/AdventureBlock/AdventureBlock";
+import TitleDescriptionBlock from "../blocks/TitleDescriptionBlock/TitleDescriptionBlock";
 
 
 interface P {
@@ -19,8 +20,8 @@ export const Blocks = ({pageData, blogPosts} : P) => {
 
   return (
     <>
-      {pageData.getPagesDocument.data.pageBlocks
-        ? pageData.getPagesDocument.data.pageBlocks.map(
+      {pageData?.getPagesDocument?.data?.pageBlocks
+        ? pageData?.getPagesDocument?.data?.pageBlocks?.map(
             (block: any, i: number): JSX.Element | null => {
               switch (block && block.__typename) {    
                 case "PagesPageBlocksHomepageHero":
@@ -79,6 +80,14 @@ export const Blocks = ({pageData, blogPosts} : P) => {
                               </React.Fragment>
                             );
                           }
+                          case "PagesPageBlocksTitleDescription":
+                            if (block && block.__typename) {
+                              return (
+                                <React.Fragment key={i + block.__typename}>
+                                  <TitleDescriptionBlock {...block} />
+                                </React.Fragment>
+                              );
+                            }
                            case "PagesPageBlocksLeftImageRightLinks":
                         if (block && block.__typename) {
                           return (
