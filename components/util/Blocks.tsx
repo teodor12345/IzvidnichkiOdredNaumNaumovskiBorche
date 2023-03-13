@@ -7,6 +7,7 @@ import ImageBlock from "../blocks/ImageBlock/ImageBlock";
 import ImageTwoBlock from "../blocks/ImageTwoBlock/ImageTwoBlock";
 import ContentVideoBlock from "../blocks/ContentVideoBlock/ContentVideoBlock";
 import LeftImageRightLinksBlock from "../blocks/LeftImageRightLinksBlock/LeftImageRightLinksBlock";
+import AdventureBlock from "../blocks/AdventureBlock/AdventureBlock";
 
 
 interface P {
@@ -70,6 +71,14 @@ export const Blocks = ({pageData, blogPosts} : P) => {
                             </React.Fragment>
                           );
                         }
+                        case "PagesPageBlocksAdventure":
+                          if (block && block.__typename) {
+                            return (
+                              <React.Fragment key={i + block.__typename}>
+                                <AdventureBlock {...block} />
+                              </React.Fragment>
+                            );
+                          }
                            case "PagesPageBlocksLeftImageRightLinks":
                         if (block && block.__typename) {
                           return (

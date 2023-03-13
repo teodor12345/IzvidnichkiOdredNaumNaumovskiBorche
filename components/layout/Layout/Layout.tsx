@@ -27,7 +27,6 @@ const Layout = ({ children, seo, slugs, currentSlug }: P) => {
         ))}
       </Head>
       <main>
-        <HeaderBlock currentSlug={currentSlug} slugs={slugs}/>
         {children}
         <FooterBlock />
       </main>

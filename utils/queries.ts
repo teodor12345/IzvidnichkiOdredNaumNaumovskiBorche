@@ -6,6 +6,8 @@ import { ImageTwoQuery } from "../components/blocks/ImageTwoBlock/query";
 import { LeftImageRightLinksQuery } from "../components/blocks/LeftImageRightLinksBlock/query";
 import { SpacingBlockQuery } from "../components/blocks/SpacingBlock/query";
 import { TwoImagesQuery } from "../components/blocks/TwoImagesBlock/query";
+import { AdventureBlockQuery } from "../components/blocks/AdventureBlock/query";
+
 
 export const getPageQuery = gql`
   query PageQuery($relativePath: String!) {
@@ -28,6 +30,7 @@ export const getPageQuery = gql`
           ${ImageTwoQuery}
           ${ContentVideoQuery}
           ${LeftImageRightLinksQuery}
+          ${AdventureBlockQuery}
         }
       }
     }

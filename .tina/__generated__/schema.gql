@@ -147,6 +147,13 @@ type PagesPageBlocksHomepageHero {
   heroImage: String
 }
 
+type PagesPageBlocksAdventure {
+  adventureTitle: JSON
+  adventureDescription: JSON
+  adventureImage: String
+  adventureImageAlt: String
+}
+
 type PagesPageBlocksTwoImagesImageList {
   heroImage: String
   buttonTitle: String
@@ -199,7 +206,7 @@ type PagesPageBlocksLeftImageRightLinks {
   listOfMerchandise: [PagesPageBlocksLeftImageRightLinksListOfMerchandise]
 }
 
-union PagesPageBlocks = PagesPageBlocksSpacing | PagesPageBlocksHomepageHero | PagesPageBlocksTwoImages | PagesPageBlocksImage | PagesPageBlocksImageTwo | PagesPageBlocksContentVideo | PagesPageBlocksLeftImageRightLinks
+union PagesPageBlocks = PagesPageBlocksSpacing | PagesPageBlocksHomepageHero | PagesPageBlocksAdventure | PagesPageBlocksTwoImages | PagesPageBlocksImage | PagesPageBlocksImageTwo | PagesPageBlocksContentVideo | PagesPageBlocksLeftImageRightLinks
 
 type Pages {
   slug: String
@@ -290,6 +297,13 @@ input PagesPageBlocksHomepageHeroMutation {
   heroImage: String
 }
 
+input PagesPageBlocksAdventureMutation {
+  adventureTitle: JSON
+  adventureDescription: JSON
+  adventureImage: String
+  adventureImageAlt: String
+}
+
 input PagesPageBlocksTwoImagesImageListMutation {
   heroImage: String
   buttonTitle: String
@@ -345,6 +359,7 @@ input PagesPageBlocksLeftImageRightLinksMutation {
 input PagesPageBlocksMutation {
   spacing: PagesPageBlocksSpacingMutation
   homepageHero: PagesPageBlocksHomepageHeroMutation
+  adventure: PagesPageBlocksAdventureMutation
   twoImages: PagesPageBlocksTwoImagesMutation
   image: PagesPageBlocksImageMutation
   imageTwo: PagesPageBlocksImageTwoMutation

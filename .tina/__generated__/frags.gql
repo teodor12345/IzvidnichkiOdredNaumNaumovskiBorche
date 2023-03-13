@@ -45,6 +45,12 @@ fragment PagesParts on Pages {
       description
       heroImage
     }
+    ... on PagesPageBlocksAdventure {
+      adventureTitle
+      adventureDescription
+      adventureImage
+      adventureImageAlt
+    }
     ... on PagesPageBlocksTwoImages {
       imageList {
         __typename

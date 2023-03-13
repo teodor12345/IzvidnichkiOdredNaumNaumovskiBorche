@@ -445,6 +445,62 @@
               ]
             },
             {
+              "label": "Adventure Block ",
+              "name": "adventure",
+              "fields": [
+                {
+                  "label": "Title",
+                  "name": "adventureTitle",
+                  "type": "rich-text",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "adventure",
+                    "adventureTitle"
+                  ]
+                },
+                {
+                  "label": "Description",
+                  "name": "adventureDescription",
+                  "type": "rich-text",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "adventure",
+                    "adventureDescription"
+                  ]
+                },
+                {
+                  "label": "Image",
+                  "name": "adventureImage",
+                  "type": "image",
+                  "description": "Featured Image (1929 x 487)",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "adventure",
+                    "adventureImage"
+                  ]
+                },
+                {
+                  "label": "Image Alt",
+                  "name": "adventureImageAlt",
+                  "type": "string",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "adventure",
+                    "adventureImageAlt"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageBlocks",
+                "adventure"
+              ]
+            },
+            {
               "label": "Two images block",
               "name": "twoImages",
               "fields": [
