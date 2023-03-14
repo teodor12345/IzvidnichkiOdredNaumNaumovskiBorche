@@ -17,12 +17,12 @@ const Page = ({ pageData, blogData, query, variables, slugData }: any) => {
   });
 
 
-  const blogPostsList = blogData.getBlogPostList.edges;
-  const seoData = data.getPagesDocument.data.seo;
+  const blogPostsList = blogData?.getBlogPostList?.edges;
+  const seoData = data?.getPagesDocument?.data?.seo;
 
   return (
     <>
-      <Layout seo={seoData} slugs={slugData} currentSlug={data.getPagesDocument.data.slug}>
+      <Layout seo={seoData} slugs={slugData} currentSlug={data?.getPagesDocument?.data?.slug}>
         <Blocks pageData={data} blogPosts={blogPostsList} />
       </Layout>
     </>
@@ -83,9 +83,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     `,
   });
 
-  const paths = pagesListData.getPagesList.edges.map(
+  const paths = pagesListData?.getPagesList?.edges?.map(
     (page: PagesConnectionEdges) => {
-      const { slug, locale } = parseTinaFileName(page?.node?.sys.filename);
+      const { slug, locale } = parseTinaFileName(page?.node?.sys?.filename);
 
       return {
         params: { slug: [slug] },

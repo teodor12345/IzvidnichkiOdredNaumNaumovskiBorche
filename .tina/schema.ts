@@ -21,6 +21,24 @@ const HomepageHeroTemplate: TinaTemplate = {
     },
   ],
 };
+
+const TitleDescriptionTemplate: TinaTemplate = {
+  label: 'Title Description Block',
+  name: 'titleDescription',
+  fields: [
+    {
+      label: 'Title',
+      name: 'mainTitle',
+      type: 'rich-text',
+    },
+    {
+      label: 'Description',
+      name: 'mainDescription',
+      type: 'rich-text',
+    },
+  ],
+};
+
 const AdventureTemplate: TinaTemplate = {
   label: 'Adventure Block ',
   name: 'adventure',
@@ -452,7 +470,7 @@ export default defineSchema({
           name: "pageBlocks",
           type: "object",
           list: true,
-          templates: [SpacingBlockTemplate, HomepageHeroTemplate,AdventureTemplate, TwoImagesBlockTemplate,ImageBlockTemplate,ImageTwoBlockTemplate,ContentVideoTemplate,LeftImageRightLinksTemplate],
+          templates: [SpacingBlockTemplate,TitleDescriptionTemplate, HomepageHeroTemplate,AdventureTemplate, TwoImagesBlockTemplate,ImageBlockTemplate,ImageTwoBlockTemplate,ContentVideoTemplate,LeftImageRightLinksTemplate],
         },
       ],
     },

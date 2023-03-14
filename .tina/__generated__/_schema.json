@@ -401,6 +401,39 @@
               ]
             },
             {
+              "label": "Title Description Block",
+              "name": "titleDescription",
+              "fields": [
+                {
+                  "label": "Title",
+                  "name": "mainTitle",
+                  "type": "rich-text",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "titleDescription",
+                    "mainTitle"
+                  ]
+                },
+                {
+                  "label": "Description",
+                  "name": "mainDescription",
+                  "type": "rich-text",
+                  "namespace": [
+                    "pages",
+                    "pageBlocks",
+                    "titleDescription",
+                    "mainDescription"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageBlocks",
+                "titleDescription"
+              ]
+            },
+            {
               "label": "Homepage Hero",
               "name": "homepageHero",
               "fields": [
